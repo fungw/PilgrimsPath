@@ -1,7 +1,9 @@
 # Pilgrims Path
 
 ## Welcome
-This is Pilgrims Path. A simple game that I put together.
+This is Pilgrims Path. A simple game that I put together for a final game project. The aim of the game is simple; guide the Pilgrim as far down the trail as possible, watch out for those pesky lightsaber-like towers!
+
+When you've had enough of the game, make sure to check out "score.txt" in the game directory to compare your scores with your friends! 
 
 ### Instructions
 * UP or DOWN to guide the Pilgrim through the perilous journey.

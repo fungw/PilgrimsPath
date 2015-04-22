@@ -11,4 +11,4 @@ When you've had enough of the game, make sure to check out "score.txt" in the ga
 ### Instructions
 * UP or DOWN to guide the Pilgrim through the perilous journey.
 * SPACE to activate morphing ability; uses mana. But watch out, there will be a cooldown period if the Pilgrims' mana is too low!
-* Press SPACE when *GAME OVER* is displayed.
+* Press SPACE when *GAME OVER* is displayed to try again.

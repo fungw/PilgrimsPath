@@ -26,3 +26,6 @@ public int time = 0;
 public int startTime = 0;
 public boolean write = false;
 public boolean stall = false;
+public int high_score = 0;
+public boolean cont_game = false;
+public boolean bonus = false;

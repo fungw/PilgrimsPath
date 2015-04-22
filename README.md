@@ -8,6 +8,8 @@ This is Pilgrims Path. A simple game that I put together for a final game projec
 
 When you've had enough of the game, make sure to check out "score.csv" in the game directory to compare your scores with your friends! 
 
+A little special feature that I have implemented is if you beat own high score in the game, you will be revived from that point onwards and be able to continue until the next time you die again. This is a once-off bonus round. It does not accumalate after you die on the bonus round. i.e. For each time you beat your own high score in normal mode, you only get one bonus round. Beating your own high score on a bonus round will not result in another bonus round.
+
 ## Instructions
 * UP or DOWN to guide the Pilgrim through the perilous journey.
 * SPACE to activate morphing ability; uses mana. But watch out, there will be a cooldown period if the Pilgrims' mana is too low!

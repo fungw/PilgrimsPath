@@ -85,9 +85,12 @@ void keyPressed() {
       speed = 2;
       firstDozenObstacles = true;
       firstDozenCount = 0;
-      startTime = millis();
-      score = 0;
-      magic_number = 100;
+      if (!cont_game) {
+        startTime = millis();
+        score = 0;
+        magic_number = 100;
+        bonus = false;
+      }
     } else {
       player.setTransform();
     }

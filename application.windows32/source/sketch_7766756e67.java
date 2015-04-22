@@ -101,9 +101,12 @@ public void keyPressed() {
       speed = 2;
       firstDozenObstacles = true;
       firstDozenCount = 0;
-      startTime = millis();
-      score = 0;
-      magic_number = 100;
+      if (!cont_game) {
+        startTime = millis();
+        score = 0;
+        magic_number = 100;
+        bonus = false;
+      }
     } else {
       player.setTransform();
     }
@@ -191,12 +194,34 @@ public class gameOver {
       + "," + hour() + "," + minute() + "," + millis() + ","
       + day() + "," + month() + "," + year());
     if (lines != null) {
+      setHighScore(lines);
+      if (checkScore() && !bonus) {
+        println("NEW HIGH SCORE");
+        cont_game = true; 
+        bonus = true;
+      } else {
+        cont_game = false;  
+      }
       for (int i=1; i<lines.length; i++) {
-        output.println(lines[i]);  
+        output.println(lines[i]);
       }
     } 
     output.flush(); // Writes the remaining data to the file
     output.close(); // Finishes the file
+  }
+
+  private void setHighScore(String[] linesScore) {
+    for (int i=1; i<lines.length; i++) {
+      String str = linesScore[i];
+      String[] strList = split(str, ",");
+      if (Integer.parseInt(strList[0]) > high_score) {
+        high_score = Integer.parseInt(strList[0]);
+      }
+    }
+  }
+  
+  private boolean checkScore() {
+    return score > high_score;  
   }
 }
 
@@ -228,6 +253,9 @@ public int time = 0;
 public int startTime = 0;
 public boolean write = false;
 public boolean stall = false;
+public int high_score = 0;
+public boolean cont_game = false;
+public boolean bonus = false;
 public class obstacles {
   private float x1_1, y1_1, x2_1, y2_1;
   private float x1_2, y1_2, x2_2, y2_2;

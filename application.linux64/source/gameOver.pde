@@ -24,12 +24,34 @@ public class gameOver {
       + "," + hour() + "," + minute() + "," + millis() + ","
       + day() + "," + month() + "," + year());
     if (lines != null) {
+      setHighScore(lines);
+      if (checkScore() && !bonus) {
+        println("NEW HIGH SCORE");
+        cont_game = true; 
+        bonus = true;
+      } else {
+        cont_game = false;  
+      }
       for (int i=1; i<lines.length; i++) {
-        output.println(lines[i]);  
+        output.println(lines[i]);
       }
     } 
     output.flush(); // Writes the remaining data to the file
     output.close(); // Finishes the file
+  }
+
+  private void setHighScore(String[] linesScore) {
+    for (int i=1; i<lines.length; i++) {
+      String str = linesScore[i];
+      String[] strList = split(str, ",");
+      if (Integer.parseInt(strList[0]) > high_score) {
+        high_score = Integer.parseInt(strList[0]);
+      }
+    }
+  }
+  
+  private boolean checkScore() {
+    return score > high_score;  
   }
 }
 

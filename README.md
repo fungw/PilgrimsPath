@@ -1,4 +1,6 @@
 # Pilgrims Path
+_EPILEPSY WARNING_
+**THIS GAME HAS POTENTIAL TO INDUCE SEIZURES FOR PEOPLE WITH PHOTOSENSITIVE EPILEPSY. IF YOU HAVE PHOTOSENSITIVE EPILEPSY OR FEEL YOU MIGHT BE SUSCEPTIBLE TO A SEIZURE, DO NOT PLAY THIS GAME. VIEWER DISCRETION IS ADVISED.**
 
 ## Welcome
 This is Pilgrims Path. A simple game that I put together for a final game project. The aim of the game is simple; guide the Pilgrim as far down the trail as possible, watch out for those pesky lightsaber-like towers!
